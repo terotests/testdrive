@@ -1,0 +1,7 @@
+{
+  "name": "helloworld",
+  "version": "0.1.0",
+  "entry": "src/Shared.rgr",
+  "license": "MIT",
+  "dependencies": {}
+}
