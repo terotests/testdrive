@@ -1,0 +1,24 @@
+{
+  "name": "helloworld",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Android Hello World in Ranger (RangerStarter)",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "npm run android:install",
+    "build": "npm run android:build",
+    "check": "node scripts/rgr.js check src/Shared.rgr",
+    "test": "npm run check",
+    "android:build": "npm run android:compile && node scripts/android-gradle.js assembleDebug",
+    "android:compile": "node scripts/rgr.js build src/Shared.rgr -l=kotlin -d=platforms/android/app/src/main/generated -- -ktpackage=com.example.helloworld",
+    "android:install": "npm run android:compile && node scripts/android-gradle.js installDebug",
+    "android:screenshot": "node scripts/android-gradle.js :app:testDebugUnitTest --tests com.example.helloworld.AppScreenScreenshotTest"
+  },
+  "devDependencies": {
+    "ranger-compiler": "^3.5.1"
+  }
+}

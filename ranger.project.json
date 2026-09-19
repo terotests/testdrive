@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "name": "helloworld",
+  "kind": "application",
+  "license": "MIT",
+  "surfaces": {
+    "cli": {
+      "enabled": false,
+      "targets": [],
+      "entry": "src/Main.rgr"
+    },
+    "library": {
+      "enabled": false,
+      "targets": []
+    },
+    "web": {
+      "enabled": false,
+      "target": "es6",
+      "tooling": "vite",
+      "entry": "src/Web.rgr"
+    },
+    "desktop": {
+      "enabled": false,
+      "target": "cpp",
+      "runtime": "sdl2",
+      "entry": "src/Shared.rgr",
+      "singleThread": false
+    },
+    "android": {
+      "enabled": true,
+      "target": "kotlin",
+      "package": "com.example.helloworld",
+      "devices": [
+        "phone"
+      ],
+      "entry": "src/Shared.rgr"
+    },
+    "ios": {
+      "enabled": false,
+      "target": "swift6",
+      "bundleId": "com.example.helloworld",
+      "devices": [],
+      "entry": "src/Shared.rgr"
+    }
+  },
+  "documentation": {
+    "enabled": false,
+    "api": false,
+    "strict": false
+  },
+  "agents": {
+    "agentsMd": true,
+    "claude": false,
+    "skills": "auto"
+  },
+  "ci": {
+    "github": true,
+    "targetMatrix": true
+  }
+}
