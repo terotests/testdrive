@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ranger Android</string>
+    <string name="headline_line1">Hello from Ranger on</string>
+    <string name="headline_line2">Android</string>
+    <string name="tagline">androidtest · kotlin · compose</string>
+</resources>
