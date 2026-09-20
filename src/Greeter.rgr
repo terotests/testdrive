@@ -1,0 +1,13 @@
+; SPDX-License-Identifier: MIT
+
+class Greeter {
+    def greeting:string "hei"
+
+    Constructor (greeting:string) {
+        this.greeting = greeting
+    }
+
+    fn hello:string (name:string) {
+        return ((this.greeting + " ") + name)
+    }
+}

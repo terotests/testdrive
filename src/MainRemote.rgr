@@ -1,0 +1,11 @@
+; SPDX-License-Identifier: MIT
+; Greeter fetched via rgrc install — only the RangerStarter subdir, not a full Ranger clone.
+
+Import "pkg:starter/src/Greeter.rgr"
+
+class MainRemote {
+    sfn m@(main):void () {
+        def g (new Greeter("pkg"))
+        print (g.hello("RangerStarter"))
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "testdrive",
+  "version": "0.1.0",
+  "entry": "src/Main.rgr",
+  "license": "MIT",
+  "dependencies": {
+    "starter": {
+      "git": "https://github.com/terotests/RangerStarter.git",
+      "rev": "8b25ac1a62729d1df421af901e9b804bdc672ff6"
+    }
+  }
+}
