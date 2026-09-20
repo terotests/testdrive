@@ -1,0 +1,10 @@
+; SPDX-License-Identifier: MIT
+
+Import "Greeter.rgr"
+
+class Main {
+    sfn m@(main):void () {
+        def g (new Greeter("hei"))
+        print (g.hello("maailma"))
+    }
+}

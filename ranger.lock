@@ -1,0 +1,10 @@
+{
+  "lockVersion": 1,
+  "packages": {
+    "starter": {
+      "git": "https://github.com/terotests/RangerStarter.git",
+      "rev": "8b25ac1a62729d1df421af901e9b804bdc672ff6",
+      "sha256": "3f5da917c9731c0ede31fe8909b52b7e8c41ce6809b1b20ccc6548f200edc307"
+    }
+  }
+}

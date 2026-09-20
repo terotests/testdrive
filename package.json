@@ -1,0 +1,21 @@
+{
+  "name": "testdrive",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal Ranger CLI hello world — compiler via npm, no Ranger repo clone",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "scripts/rgr run src/Main.rgr",
+    "start:remote": "scripts/deps.sh && scripts/rgr run src/MainRemote.rgr",
+    "build": "scripts/rgr build src/Main.rgr",
+    "check": "scripts/rgr check src/Main.rgr",
+    "deps": "scripts/deps.sh"
+  },
+  "devDependencies": {
+    "ranger-compiler": "^3.5.1"
+  }
+}
