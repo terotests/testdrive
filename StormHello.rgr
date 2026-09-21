@@ -1,0 +1,32 @@
+; SPDX-License-Identifier: MIT
+;
+; testdrive — Ranger 3.x program that imports EVG 3.0 Storm as a package.
+; Layout: a page, a title, a display list. Prints the list as JSON.
+
+Import "pkg:evg/EVGElement.rgr"
+Import "pkg:evg/EVGStyleSheet.rgr"
+Import "pkg:evg/EVGLayout.rgr"
+Import "pkg:evg/EVGDisplayList.rgr"
+
+sfn main:void () {
+    def page (EVGElement.createDiv())
+    page.className = "page"
+    def title (EVGElement.createSpan())
+    title.className = "title"
+    title.textContent = "EVG 3.0 Storm"
+    page.addChild(title)
+
+    def sheet (new EVGStyleSheet())
+    sheet.parse(".page { padding: 24px } .title { font-size: 28px; color: #10162b }")
+    sheet.setViewport(400.0 200.0 false)
+    sheet.applyTree(page "")
+
+    def lay (new EVGLayout())
+    lay.setPageSize(400.0 200.0)
+    lay.layout(page)
+
+    def dl (new EVGDisplayList())
+    dl.setTextEngine((lay.getTextEngine()))
+    dl.build(page)
+    print (dl.toJson())
+}
