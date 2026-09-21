@@ -1,0 +1,9 @@
+{
+  "name": "testdrive",
+  "version": "0.1.0",
+  "entry": "StormHello.rgr",
+  "license": "MIT",
+  "dependencies": {
+    "evg": { "path": "../evg/storm" }
+  }
+}
