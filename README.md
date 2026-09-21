@@ -10,8 +10,8 @@ repos/
   testdrive/    this package
 ```
 
-`ranger.json` names EVG by path — the same pattern Ranger's gallery now
-uses (`deps/evg/storm` after `scripts/fetch-evg.sh`):
+`ranger.json` names EVG by path (Ranger's gallery still uses a vendor
+copy of Storm until this package is on `evg` master):
 
 ```json
 "evg": { "path": "../evg/storm" }
